@@ -1,25 +1,26 @@
 <!DOCTYPE html>
 <html lang="en">
 
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-        <title> great number game </title>
-    </head>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <title> great number game </title>
+</head>
 
-    <body>
-        <div class="container">
-             <h2>Welcome to the Great Numbers Game</h2>
-            <p>I am thinking of a number between 1 and 100</p><br>
-            <p>Take a guess!</p>
-            <form action="/" method= ['POST']>
-                <input type="text" name="guess">
-                <input type="submit" name="submit">
-            </form>
-            {{<h1 id="low">Too Low</h1>}}
-            
-        </div>
-    </body>
+<body>
+    <div class="container">
+        <h2>Welcome to the Great Numbers Game</h2>
+        <p>I am thinking of a number between 1 and 100</p><br>
+        <p>Take a guess!</p>
+        <form action="/guess" method="POST">
+            <input type="text" name="guess">
+            <input type="submit" name="submit">
+        </form>
+
+        <h1 id="low">Too Low</h1>
+
+    </div>
+</body>
 
 </html>
