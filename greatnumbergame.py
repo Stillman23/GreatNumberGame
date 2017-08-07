@@ -13,14 +13,15 @@ def start():
 
 @app.route('/guess', methods = ['POST'])
 def guess():
-    if session['random_number'] > request.form[int('guess')]:
+    if session['random_number'] > int(request.form['guess']):
         print 'too low'
+        
 
-    elif session['random_number'] == request.form[int('guess')]:
+    elif session['random_number'] == int(request.form['guess']):
         print 'you win'
     
-    else: session['random_number'] < request.form[int('guess')]
-    print 'too high'
+    else: 
+        print 'too high'
 
    
 
