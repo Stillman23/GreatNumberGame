@@ -15,19 +15,25 @@ def start():
 def guess():
     if session['random_number'] > int(request.form['guess']):
         print 'too low'
+        result = "too low"
+        return render_template("index.html", result = result)
         
 
     elif session['random_number'] == int(request.form['guess']):
         print 'you win'
+        result = "you win"
+        return render_template("index.html", result = result)
     
     else: 
         print 'too high'
+        result = "too high"
+        return render_template("index.html", result = result)
 
    
 
     print session['random_number'] 
-    print request.form['guess']
-    return redirect('/')
+    print int(request.form['guess'])
+    
 
 
 
